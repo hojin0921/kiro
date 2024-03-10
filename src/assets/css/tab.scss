@@ -1,0 +1,59 @@
+.el-tabs {
+  height: 100%;
+  .el-tabs__header {
+    background-color: $white;
+    padding: 16px 32px 16px;
+    border-bottom: 1px solid $color-ebeef5;
+    margin: 0;
+    .el-tabs__nav-wrap {
+      margin: 0;
+      &::after {
+        display: none;
+      }
+      .el-tabs__active-bar {
+        display: none;
+      }
+      .el-tabs__item {
+        background-color: #f4f4f4;
+        margin-right: 14px;
+        border-radius: 44px;
+        @include fontSetting(20px, 500, $color_293332);
+        padding: 13px 24px !important;
+        .custom-tabs-label {
+          @include flex();
+        }
+        svg {
+          margin-right: 3px;
+          position: relative;
+          top: -1px;
+        }
+        &.is-active {
+          background-color: #3b76bd;
+          @include fontSetting(20px, 500, $white);
+          svg {
+            &.fill {
+              path {
+                fill: $white;
+              }
+            }
+            &.stroke {
+              path {
+                stroke: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .el-tabs__content {
+    height: calc(100% - 73px);
+    .el-tab-pane {
+      padding: 32px;
+      height: calc(100% - 64px);
+      & > .box {
+        height: calc(100% - 64px);
+      }
+    }
+  }
+}

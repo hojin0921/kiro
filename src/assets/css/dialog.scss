@@ -1,0 +1,137 @@
+.el-popup-parent--hidden {
+  width: 100% !important;
+}
+
+.el-dialog {
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  .el-dialog__header {
+    background-color: #e4f4e5;
+    padding: 18px 32px;
+    @include fontSetting(20px, 700, $color_293332);
+    .el-dialog__headerbtn {
+      display: none;
+    }
+  }
+  .el-dialog__body {
+    .body {
+      padding: 24px 32px;
+    }
+  }
+
+  .dialog-footer {
+    border-top: 1px solid #e6e6e6;
+    padding: 20px 32px;
+    @include flex($justify: space-between);
+    .el-button + .el-button {
+      margin-left: 8px;
+    }
+    &.fxcen {
+      justify-content: center;
+    }
+    &.fxend {
+      justify-content: flex-end;
+    }
+    .el-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.info_title {
+  @include fontSetting(24px, 700, $color_293332);
+  margin-bottom: 12px;
+}
+
+table.info_table {
+  border-top: 1px solid #293332;
+  width: 100%;
+  tbody {
+    tr {
+      th,
+      td {
+        border-bottom: 1px solid #e6e6e6;
+        text-align: left;
+      }
+      th {
+        @include fontSetting(18px, 700, $color_293332);
+        background-color: #f8f8f8;
+        padding: 16px 0 16px 32px;
+        vertical-align: top;
+      }
+      td {
+        @include fontSetting(16px, 400, $color_293332);
+        padding: 16px 0 16px 32px;
+        .note {
+          min-height: 90px;
+        }
+      }
+    }
+  }
+}
+
+.info_modify {
+  background-color: #f8f8f8;
+  border-radius: 16px;
+  width: 446px;
+  padding: 32px;
+  .ti {
+    margin: 32px 0 12px;
+    @include fontSetting(18px, 700, $color_293332);
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+.el-message-box {
+  border-radius: 16px;
+  --el-messagebox-width: 364px;
+  padding: 40px 32px;
+  .el-message-box__header {
+    padding-bottom: 0;
+    .el-message-box__title {
+      @include fontSetting(20px, 700, $color_293332);
+    }
+    .el-message-box__headerbtn {
+      display: none;
+    }
+  }
+  .el-message-box__content {
+    .el-message-box__container {
+      padding: 16px 0 24px;
+      .el-message-box__message {
+        @include fontSetting(16px, 500, $color_293332);
+        span {
+          @include fontSetting(16px, 500, $color-32A13A);
+        }
+      }
+    }
+  }
+  .el-message-box__btns {
+    .el-button + .el-button {
+      margin-left: 8px;
+    }
+    .el-button {
+      display: inline-block;
+      width: 88px;
+      border-color: #f3f3f3;
+      background-color: #f3f3f3;
+      @include fontSetting(14px, 700, $color_293332);
+      &:hover {
+        background-color: #e6e6e6;
+        border-color: #e6e6e6;
+      }
+      &.el-button--primary {
+        border-color: #32a13a;
+        background-color: #32a13a;
+        @include fontSetting(14px, 700, $white);
+        &:hover {
+          background-color: #278d2e;
+          border-color: #278d2e;
+        }
+      }
+    }
+  }
+}

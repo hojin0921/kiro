@@ -1,0 +1,34 @@
+.el-switch {
+  .el-switch__core {
+    width: 80px;
+    height: 32px;
+    border-radius: 32px;
+    border-color: #e6e6e6;
+    background-color: #e6e6e6;
+    .el-switch__action {
+      width: 28px;
+      height: 28px;
+    }
+    .el-switch__inner {
+      padding: 0 0 0 27px;
+      .is-text {
+        @include fontSetting(16px, 500, #575958);
+      }
+    }
+  }
+  &.is-checked {
+    .el-switch__core {
+      border-color: $color-32A13A;
+      background-color: $color-32A13A;
+      .el-switch__action {
+        left: calc(100% - 29px);
+      }
+      .el-switch__inner {
+        padding: 0 37px 0 0px;
+        .is-text {
+          @include fontSetting(16px, 500, $white);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import 'variable', 'mixin';
+.alarm_box {
+  background: $white;
+  box-shadow: 3px 3px 8px rgb(0, 0, 0, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 24px;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  .alarm_title {
+    background-color: #f5faf5;
+    padding: 16px 36px;
+    @include fontSetting(28px, 700, $color_293332, 28px);
+  }
+  & > ul {
+    @include flex($justify: space-between, $align: stretch, $wrap: wrap);
+    padding: 28px 0;
+    & > li {
+      flex: 1 1 40%;
+      .ti {
+        @include fontSetting(24px, 700, $color_293332, 28px);
+      }
+      &:first-of-type {
+        padding: 0 60px 0 36px;
+      }
+      &:last-of-type {
+        padding: 0 36px 0 60px;
+        border-left: 1px solid #e6e6e6;
+      }
+      .set {
+        margin-top: 20px;
+        @include flex($justify: flex-start, $align: flex-start, $wrap: wrap);
+        .switch {
+          @include flex($justify: flex-start);
+          padding-top: 5px;
+          margin-right: 64px;
+          span {
+            @include fontSetting(18px, 700, $color_293332);
+            margin-right: 20px;
+          }
+        }
+        .data {
+          li {
+            margin-top: 16px;
+            &:first-of-type {
+              margin-top: 0;
+            }
+            strong {
+              @include fontSetting(18px, 700, $color_293332);
+              margin-right: 28px;
+            }
+            span {
+              @include fontSetting(18px, 400, $color_293332);
+              margin: 0 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

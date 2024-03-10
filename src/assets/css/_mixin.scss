@@ -1,0 +1,59 @@
+@mixin flex($direction: row, $justify: center, $align: center, $wrap: wrap) {
+  /*
+  * $direction: row | row-reverse | column | column-reverse
+  * $justify: flex-start | flex-end | center | space-between | space-around | space-evenly
+  * $align: flex-start | flex-end | center | baseline | stretch
+  * $wrap: nowrap | wrap | wrap-reverse
+  */
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin fontSetting($size: 16px, $weight: 400, $color: $black, $line: 21.28px, $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-style: $style;
+  line-height: $line;
+}
+
+@mixin backgroundImage(
+  $width: auto,
+  $height: auto,
+  $url: '',
+  $position: center center,
+  $repeat: no-repeat,
+  $size: auto
+) {
+  width: $width;
+  height: $height;
+  background-image: url($url);
+  background-position: $position;
+  background-repeat: $repeat;
+  background-size: $size;
+}
+
+@mixin scrollbar() {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    height: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0);
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    }
+  }
+}

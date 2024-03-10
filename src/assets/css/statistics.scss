@@ -1,0 +1,301 @@
+@import 'variable', 'mixin';
+.statistics {
+  min-width: 1200px;
+  .boxs {
+    display: table;
+    width: 100%;
+    .cell {
+      display: table-cell;
+      vertical-align: top;
+      &:last-of-type {
+        width: 460px;
+        padding-left: 24px;
+      }
+      .box {
+        &.data {
+          padding: 16px 32px;
+        }
+      }
+    }
+    &:last-of-type {
+      margin-top: 24px;
+    }
+  }
+  .line {
+    margin: 0 -32px;
+    border: 0;
+    height: 1px;
+    background-color: $color-E6E6E6;
+    margin-top: 16px;
+  }
+}
+.summary {
+  @include flex($justify: space-between, $align: stretch);
+  & > div {
+    flex: 1 1 40%;
+    padding: 24px 40px;
+    box-shadow: 3px 3px 8px rgb(0, 0, 0, 0.2);
+    background: $white;
+    @include flex($justify: space-between);
+    &:first-of-type {
+      margin-right: 2px;
+      border-radius: 16px 0 0 16px;
+      .title {
+        strong {
+          &::before {
+            background-color: $color-32A13A;
+          }
+        }
+      }
+    }
+    &:last-of-type {
+      margin-left: 2px;
+      background: $white;
+      border-radius: 0 16px 16px 0;
+      .title {
+        strong {
+          &::before {
+            background-color: $color-3b76bd;
+          }
+        }
+      }
+    }
+    .title {
+      strong {
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          margin-right: 8px;
+          border-radius: 100%;
+          position: relative;
+          top: -2px;
+        }
+        @include flex($justify: flex-start);
+        display: block;
+        @include fontSetting(24px, 700, $color_293332);
+      }
+      span {
+        padding-left: 20px;
+        margin-top: 10px;
+        display: block;
+        @include fontSetting(20px, 400, $color_575958);
+      }
+    }
+    .data {
+      @include flex($justify: flex-end, $align: center);
+      .kg {
+        @include fontSetting(36px, 700, $color_293332);
+        margin-right: 28px;
+        strong {
+          @include fontSetting(48px, 700, $color_293332);
+        }
+      }
+      .state {
+        strong {
+          display: inline-block;
+          border: 1px solid $white;
+          border-radius: 8px;
+          padding: 5px 13px;
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-left: 4px;
+          }
+          &.down {
+            @include fontSetting(20px, 700, $color-B20021);
+            border-color: #f6dee2;
+            background-color: #fdf6f7;
+            &::after {
+              background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 14H13M13 14V5M13 14L2.5 3.5' stroke='%23B30021' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            }
+          }
+          &.up {
+            @include fontSetting(20px, 700, $color-32A13A);
+            border-color: #e2f1e3;
+            background-color: #f5faf5;
+            &::after {
+              background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 3.5H13M13 3.5V12.5M13 3.5L2.5 14' stroke='%2332A13A' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            }
+          }
+        }
+        span {
+          display: block;
+          margin-top: 4px;
+          @include fontSetting(16px, 400, $color_575958);
+        }
+      }
+    }
+  }
+}
+
+.chart_search {
+  @include flex($justify: flex-start);
+  hr {
+    margin: 0 20px 0 5px;
+    border: 0;
+    width: 1px;
+    height: 40px;
+    background-color: $color-E6E6E6;
+  }
+}
+
+.chat_bar {
+  margin-top: 16px;
+  .bar {
+    padding-left: 39px;
+    height: 230px;
+    position: relative;
+    .ti {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      @include fontSetting(12px, 400, $color-373A39);
+    }
+  }
+  .bar_table {
+    li {
+      span {
+        &:first-of-type {
+          width: 71px;
+          text-align: left;
+          padding-left: 10px;
+        }
+      }
+    }
+    &.head {
+      border-top: 0;
+      background-color: #f8f8f8;
+      li {
+        span {
+          border-color: #f8f8f8;
+          @include fontSetting(13px, 700, $color_293332);
+        }
+      }
+    }
+  }
+
+  &.horizonta {
+    @include flex($justify: flex-start, $align: stretch, $wrap: wrap);
+    .bar {
+      padding-left: 20px;
+      height: 162px;
+      flex-grow: 0;
+      width: 497px;
+    }
+    .bar-table {
+      flex-grow: 1;
+      width: auto;
+      margin-left: 32px;
+      .bar_table {
+        li {
+          height: 42px;
+        }
+      }
+    }
+  }
+}
+
+.all_sum {
+  .select_g {
+    margin-top: 16px;
+    .el-select {
+      margin-left: 4px;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-left: 12px;
+      }
+    }
+  }
+  .all_sum_data {
+    margin-top: 24px;
+    li {
+      margin-top: 8px;
+      border-radius: 16px;
+      padding: 15px 32px;
+      @include flex($justify: space-between);
+      span {
+        @include fontSetting(20px, 600, #293332);
+        s {
+          display: inline-block;
+          margin-left: 40px;
+          text-decoration: none;
+          text-align: left;
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
+      strong {
+        font-size: 40px;
+        font-weight: 700;
+      }
+      &:first-of-type {
+        margin-top: 0;
+      }
+      &:nth-of-type(1) {
+        background-color: #f8f8f8;
+        strong {
+          color: #293332;
+        }
+      }
+      &:nth-of-type(2) {
+        background-color: #f5faf5;
+        strong,
+        s {
+          color: #32a13a;
+        }
+      }
+      &:nth-of-type(3) {
+        background-color: #fdf6f7;
+        strong,
+        s {
+          color: #b20021;
+        }
+      }
+    }
+  }
+}
+
+.piechat {
+  margin-top: 24px;
+  padding-top: 0px;
+  @include flex($justify: flex-start, $wrap: nowrap);
+  .chat {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    height: 200px;
+    width: 200px;
+    flex-grow: 0;
+  }
+  .legends {
+    // padding-left: 220px;
+    padding-left: 20px;
+    flex-grow: 1;
+  }
+  .legend {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+    display: block;
+    width: 100%;
+    @include flex();
+    li {
+      flex: 1 1 40%;
+      padding: 0;
+      margin: 8px 0;
+      i {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        margin-right: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+.el-button {
+  --el-button-font-weight: 500;
+  --el-button-border-color: #a0a3a2;
+  --el-button-bg-color: #fff;
+  --el-button-text-color: #293332;
+  --el-button-disabled-text-color: #cdcecd;
+  --el-button-disabled-bg-color: #f2f0f0;
+  --el-button-disabled-border-color: #e6e6e6;
+  --el-button-hover-text-color: #293332;
+  --el-button-hover-bg-color: #e7f4e8;
+  --el-button-hover-border-color: #a0a3a2;
+  --el-button-active-text-color: #293332;
+  --el-button-active-border-color: #a0a3a2;
+  --el-button-active-bg-color: #e7f4e8;
+}
+
+.el-button--success {
+  --el-button-text-color: #fff;
+  --el-button-bg-color: #32a13a;
+  --el-button-border-color: #32a13a;
+  --el-button-outline-color: #32a13a;
+  --el-button-active-color: #32a13a;
+  --el-button-hover-text-color: #fff;
+  --el-button-hover-link-text-color: #fff;
+  --el-button-hover-bg-color: #278d2e;
+  --el-button-hover-border-color: #278d2e;
+  --el-button-active-bg-color: #278d2e;
+  --el-button-active-border-color: #278d2e;
+  --el-button-disabled-text-color: #cdcecd;
+  --el-button-disabled-bg-color: #f2f0f0;
+  --el-button-disabled-border-color: #e6e6e6;
+}
+
+.el-button--info {
+  --el-button-text-color: #293332;
+  --el-button-bg-color: #e6e6e6;
+  --el-button-border-color: #e6e6e6;
+  --el-button-outline-color: #e6e6e6;
+  --el-button-active-color: #e6e6e6;
+  --el-button-hover-text-color: #293332;
+  --el-button-hover-link-text-color: #293332;
+  --el-button-hover-bg-color: #c9c9c9;
+  --el-button-hover-border-color: #a0a3a2;
+  --el-button-active-bg-color: #c9c9c9;
+  --el-button-active-border-color: #a0a3a2;
+  --el-button-disabled-text-color: #cdcecd;
+  --el-button-disabled-bg-color: #f2f0f0;
+  --el-button-disabled-border-color: #e6e6e6;
+}
+
+.el-button--primary {
+  --el-button-text-color: #fff;
+  --el-button-bg-color: #135ef2;
+  --el-button-border-color: #135ef2;
+  --el-button-outline-color: #135ef2;
+  --el-button-active-color: #135ef2;
+  --el-button-hover-text-color: #fff;
+  --el-button-hover-link-text-color: #fff;
+  --el-button-hover-bg-color: #0b50da;
+  --el-button-hover-border-color: #0b50da;
+  --el-button-active-bg-color: #0b50da;
+  --el-button-active-border-color: #0b50da;
+  --el-button-disabled-text-color: #cdcecd;
+  --el-button-disabled-bg-color: #f2f0f0;
+  --el-button-disabled-border-color: #e6e6e6;
+}
+
+.el-button {
+  width: 100%;
+  font-weight: 600;
+  --el-button-size: 40px;
+  height: 40px;
+  min-width: 68px;
+  border-radius: 8px;
+  &.ib {
+    width: auto;
+    padding: 0 20px;
+  }
+  &.check {
+    border-color: #f6fafe;
+    background-color: #f6fafe;
+    color: #3b76bd;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.33325 9.2202L9.01019 13L15.3333 6.5' stroke='%233B76BD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+    &:hover {
+      background-color: #cddbe9;
+      border-color: #cddbe9;
+    }
+  }
+  &.nocheck {
+    border-color: #faf1f3;
+    background-color: #faf1f3;
+    color: #b20021;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.33325 9.2202L9.01019 13L15.3333 6.5' stroke='%23B30021' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+    &:hover {
+      background-color: #e2d9db;
+      border-color: #fdf8f9;
+    }
+  }
+}
+
+.el-button--large {
+  --el-button-size: 42px;
+  height: 42px;
+  padding: 0;
+  font-size: 18px;
+  border-radius: 8px;
+}
+.el-button--small {
+  --el-button-size: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 16px;
+  border-radius: 8px;
+  &.ib {
+    padding: 0 12px;
+  }
+}
+
+.add_icon {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.tablet {
+  .el-button--large {
+    --el-button-size: 88px;
+    height: 88px;
+    padding: 0;
+    font-size: 32px;
+    border-radius: 12px;
+  }
+  .el-button--small {
+    --el-button-size: 36px;
+    height: 36px;
+    padding: 0;
+    font-size: 16px;
+    border-radius: 8px;
+    &.ib {
+      padding: 0 12px;
+    }
+  }
+}

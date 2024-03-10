@@ -1,0 +1,64 @@
+@import 'variable', 'mixin', 'reset';
+
+.login_page {
+  background-color: #fafcff;
+  width: 100%;
+  height: 100%;
+  @include flex();
+  background-image: url('@/assets/images/login/bg1.png'), url('@/assets/images/login/bg2.png');
+  background-size:
+    804px 506px,
+    1243px 846px;
+  background-position:
+    left top,
+    right bottom;
+  background-repeat: no-repeat;
+  .login_box {
+    width: 480px;
+    border-radius: 16px;
+    background: $white;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.2);
+    h1 {
+      @include flex();
+      height: 65px;
+      background: rgb(70, 149, 255);
+      background: linear-gradient(180deg, rgba(70, 149, 255, 1) 0%, rgba(25, 112, 226, 1) 100%);
+    }
+    .form {
+      padding: 28px;
+      h2 {
+        @include fontSetting(28px, 500, $color_293332);
+        margin-bottom: 32px;
+      }
+      .err {
+        @include fontSetting(15px, 500, $color_E63756);
+        margin-top: 16px;
+      }
+      .el-button {
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+.tablet {
+  .login_box {
+    h1 {
+      height: 78px;
+    }
+    .form {
+      padding: 40px 28px;
+      h2 {
+        @include fontSetting(40px, 500, $color_293332);
+        margin-bottom: 40px;
+      }
+      .err {
+        @include fontSetting(20px, 500, $color_E63756, 1.4);
+      }
+      .el-button {
+        margin-top: 32px;
+      }
+    }
+  }
+}

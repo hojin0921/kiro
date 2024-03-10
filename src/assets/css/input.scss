@@ -1,0 +1,47 @@
+@import 'variable', 'mixin', 'reset';
+.el-input,
+.el-textarea {
+  --el-input-text-color: #293332;
+  --el-input-border: var(--el-border);
+  --el-input-hover-border: var(--el-border-color-hover);
+  --el-input-focus-border: var(--el-color-primary);
+  --el-input-transparent-border: 0 0 0 1px transparent inset;
+  --el-input-border-color: #e6e6e6;
+  --el-input-border-radius: 8px;
+  --el-input-bg-color: #ffffff;
+  --el-input-icon-color: var(--el-text-color-placeholder);
+  --el-input-placeholder-color: #a0a3a2;
+  --el-input-hover-border-color: #32a13a;
+  --el-input-clear-hover-color: #293332;
+  --el-input-focus-border-color: #32a13a;
+  --el-input-width: 100%;
+}
+
+.el-input__inner {
+  --el-input-inner-height: calc(42px - 2px);
+  font-weight: 600;
+  font-size: 16px;
+  &::placeholder {
+    font-weight: normal;
+  }
+}
+.txr {
+  .el-input__wrapper {
+    .el-input__inner {
+      text-align: right;
+    }
+  }
+}
+
+.el-textarea {
+  textarea {
+    resize: none;
+  }
+}
+
+.tablet {
+  .el-input__inner {
+    font-size: 24px;
+    --el-input-inner-height: calc(74px - 2px);
+  }
+}

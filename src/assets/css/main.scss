@@ -1,0 +1,304 @@
+@import 'variable', 'mixin', 'reset', 'form', 'input', 'button', 'layout', 'date_picker', 'select',
+  'table', 'pagination', 'radio', 'dialog', 'checkbox', 'tab', 'switch';
+body {
+  overflow-y: hidden;
+  background: #f7f7f7;
+}
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.error_color {
+  color: $color_E63756;
+}
+
+.search {
+  & > div {
+    margin-right: 16px;
+  }
+}
+
+.search_form {
+  @include flex($justify: flex-start, $align: center);
+  .el-input {
+    width: auto;
+    margin-right: 20px;
+  }
+}
+
+.robot_state {
+  @include flex();
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    margin-right: 4px;
+  }
+  &.standby::before {
+    background-color: $color-3b76bd;
+  }
+  &.run::before {
+    background-color: $color-32A13A;
+  }
+  &.charge::before {
+    background-color: $color-FFD600;
+  }
+  &.excavation::before {
+    background-color: $color-B20021;
+  }
+}
+
+.head_article {
+  @include flex($justify: flex-start);
+  background-color: $white;
+  padding: 16px 32px 16px;
+  border-bottom: 1px solid $color-ebeef5;
+}
+
+.head_search {
+  @include flex($justify: space-between, $align: center);
+  padding-bottom: 16px;
+  .topBtn {
+    @include flex($justify: flex-end, $align: center);
+    .el-button {
+      margin-left: 8px;
+    }
+  }
+  &.end {
+    @include flex($justify: flex-end);
+  }
+}
+
+.cont_section {
+  padding: 32px;
+  &.full {
+    min-height: 500px;
+    height: calc(100% - 138px);
+    .box {
+      height: calc(100% - 64px);
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  &.js {
+    justify-content: space-between;
+  }
+  &.is {
+    align-items: stretch;
+  }
+}
+
+.list_top {
+  @include flex($justify: space-between);
+  margin-bottom: 16px;
+  .text {
+    @include fontSetting(17px, 500, $color_575958);
+    strong {
+      @include fontSetting(17px, 700, $color-32A13A);
+    }
+  }
+  &.end {
+    @include flex($justify: flex-end);
+  }
+}
+
+.period {
+  @include flex($justify: flex-start, $align: center);
+  & > .el-date-editor {
+    &:first-of-type {
+      margin-right: 4px;
+    }
+    &:nth-child(2) {
+      margin-left: 4px;
+    }
+  }
+}
+
+.piechat {
+  position: relative;
+  margin-top: 24px;
+  padding-top: 2px;
+  height: 220px;
+  .ti {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include fontSetting(14px, 400, $color-373A39);
+  }
+  .legend {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid $color-E6E6E6;
+    @include flex();
+    li {
+      padding: 0 12px;
+      @include fontSetting(16px, 500, $color_575958);
+      i {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+.chat_bar {
+  .bar {
+    background-color: $color-FBFBFB;
+    padding: 12px 5px;
+    height: 160px;
+  }
+  .bar_table {
+    border-top: 1px solid $color_293332;
+    display: table;
+    width: 100%;
+    li {
+      display: table-row;
+      height: 32px;
+      span {
+        display: table-cell;
+        vertical-align: middle;
+        border-bottom: 1px solid $color-E6E6E6;
+        border-left: 1px solid $color-E6E6E6;
+        text-align: center;
+        @include fontSetting(13px, 400, $color_293332);
+        &:first-of-type {
+          border-left: 0;
+          width: 48px;
+          text-align: center;
+          i {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.box {
+  background: $white;
+  box-shadow: 3px 3px 8px rgb(0, 0, 0, 0.2);
+  padding: 32px;
+  border-radius: 16px;
+  @include flex($justify: space-between, $align: stretch);
+  & > div {
+    flex-grow: 1;
+  }
+  &.two {
+    @include flex($justify: flex-start, $align: stretch, $wrap: wrap);
+    & > div {
+      flex-grow: 1;
+      width: calc(50% - 32px);
+      &:last-of-type {
+        margin-left: 64px;
+      }
+    }
+  }
+  .box_title {
+    @include flex($justify: space-between);
+    height: 26px;
+    border-bottom: 1px solid $color_293332;
+    padding-bottom: 12px;
+    .title {
+      @include fontSetting(24px, 700, $color_293332);
+      @include flex($justify: flex-start);
+      .alarm {
+        background-color: $color_32A13A;
+        width: 26px;
+        height: 26px;
+        border-radius: 100%;
+        margin-left: 6px;
+        @include fontSetting(14px, 500, $white, 26px);
+        text-align: center;
+      }
+    }
+    .tag {
+      @include fontSetting(24px, 600, $color_32A13A);
+    }
+  }
+}
+
+.all_sum {
+  .box_title {
+    border-bottom: 1px solid #e6e6e6;
+    .title {
+      font-size: 20px !important;
+    }
+    .tag {
+      font-size: 20px;
+    }
+  }
+}
+
+.indextab {
+  display: block;
+  padding: 60px;
+  & > p {
+    text-align: center;
+    @include fontSetting(20px, 700, $color_293332);
+  }
+  & > ul {
+    @include flex($align: stretch);
+    margin-top: 36px;
+    li {
+      margin: 0 8px;
+      border-radius: 16px;
+      background-color: #f8f8f8;
+      padding: 36px 24px;
+      transition: all 0.2s ease-out;
+      a {
+        width: 108px;
+        height: 100%;
+        @include flex($direction: column, $align: flex-start);
+        @include fontSetting(24px, 700, $color_293332);
+        transition: all 0.2s ease-out;
+        span {
+          @include flex();
+          width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          background-color: $white;
+          margin-bottom: 40px;
+        }
+      }
+      &:hover {
+        background-color: #3b76bd;
+        a {
+          @include fontSetting(24px, 700, $white);
+        }
+      }
+    }
+  }
+}
+
+.scrollbar {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    height: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0);
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    }
+  }
+}
