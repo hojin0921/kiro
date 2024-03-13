@@ -13,6 +13,7 @@ import LogView from '@/views/LogView.vue'
 import AlarmView from '@/views/AlarmView.vue'
 import Dashboard from '@/views/DashboardView.vue'
 import NotificationView from '@/views/NotificationView.vue'
+import ReceivingView from '@/views/tablet/ReceivingView.vue'
 import RouteLayout from '@/layouts/RouteLayout.vue'
 import TabletLayout from '@/layouts/TabletLayout.vue'
 import TabletLogin from '@/layouts/TabletLogin.vue'
@@ -156,12 +157,9 @@ const router = createRouter({
       component: TabletLayout,
       children: [
         {
-          path: '/log',
-          component: LogView,
-          name: '로그',
-          meta: {
-            headArticle: true
-          }
+          path: '/tablet/receiving',
+          component: ReceivingView,
+          name: '기본 입고'
         }
       ]
     },

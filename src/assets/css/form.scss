@@ -68,14 +68,26 @@
 
 .tablet {
   .el-form {
+    .el-form-item {
+      padding-top: 24px;
+      &:first-of-type {
+        padding-top: 0;
+      }
+    }
     .el-form-item__label {
       @include fontSetting(24px, 700, $color_293332, 1.4);
+      &:first-of-type {
+        padding-top: 0;
+      }
     }
   }
   .el-form--label-top {
     .el-form-item {
       .el-form-item__label {
         margin-bottom: 24px;
+      }
+      .el-button {
+        margin-left: 0px;
       }
     }
   }

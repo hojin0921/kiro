@@ -2,7 +2,6 @@
 import { defineEmits, reactive, ref } from 'vue'
 import type { FormInstance, FormRules } from 'element-plus'
 import { productItemFormModel, productItemForm } from '@/data/region_form'
-import { el } from 'element-plus/es/locales.mjs'
 
 const emits = defineEmits(['cancel'])
 const ruleFormRef = ref<FormInstance>()

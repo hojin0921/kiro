@@ -141,6 +141,13 @@
 }
 
 .tablet {
+  .el-button {
+    --el-button-size: 88px;
+    height: 88px;
+    padding: 0;
+    font-size: 32px;
+    border-radius: 12px;
+  }
   .el-button--large {
     --el-button-size: 88px;
     height: 88px;
@@ -149,10 +156,10 @@
     border-radius: 12px;
   }
   .el-button--small {
-    --el-button-size: 36px;
-    height: 36px;
+    --el-button-size: 60px;
+    height: 60px;
     padding: 0;
-    font-size: 16px;
+    font-size: 24px;
     border-radius: 8px;
     &.ib {
       padding: 0 12px;

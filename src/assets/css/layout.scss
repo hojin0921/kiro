@@ -125,3 +125,42 @@
     }
   }
 }
+
+.tablet_layout {
+  width: 100%;
+  height: 100%;
+  background: $color-F7F7F7;
+  header {
+    padding: 24px 32px;
+    background: $white;
+    @include flex($justify: space-between);
+    border-bottom: 1px solid #e6e6e6;
+    .el-button--small {
+      --el-button-size: 60px;
+      height: 60px;
+      padding: 0;
+      font-size: 24px;
+      border-radius: 8px;
+      &.ib {
+        padding: 0 20px;
+      }
+    }
+  }
+  .content {
+    padding: 0 32px;
+    position: relative;
+    & > h2 {
+      padding: 40px 0 32px;
+      text-align: center;
+      @include fontSetting(36px, 700, $color-293332);
+    }
+    &.bottom_btn {
+      padding-bottom: 120px;
+    }
+    .bottom_button {
+      position: fixed;
+      bottom: 0;
+      width: calc(100% - 62px);
+    }
+  }
+}

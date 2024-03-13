@@ -42,3 +42,51 @@
     display: none;
   }
 }
+
+.tablet {
+  .el-select {
+    .el-select__wrapper {
+      min-height: 72px;
+      border-radius: 12px;
+      .el-icon {
+        width: 32px;
+        height: 32px;
+        background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.7446 21.1397L23.4806 13.8609C24.6942 12.3209 23.6455 10 21.736 10L10.264 10C8.35447 10 7.30577 12.3209 8.51941 13.8609L14.2554 21.1397C15.1593 22.2868 16.8407 22.2868 17.7446 21.1397Z' fill='%23293332'/%3E%3C/svg%3E%0A");
+        svg {
+          display: none;
+        }
+      }
+      .el-select__placeholder {
+        @include fontSetting(24px, 500, $color_293332);
+        &.is-transparent {
+          @include fontSetting(24px, 500, $color-A0A3A2);
+        }
+      }
+    }
+  }
+  &.el-popper {
+    margin-top: -5px;
+    border-radius: 8px;
+    .el-select-dropdown__list {
+      padding: 15px 8px;
+      .el-select-dropdown__item {
+        height: 66px;
+        padding: 0 8px;
+        @include fontSetting(24px, 400, $color_293332, 66px);
+        &.is-hovering {
+          background-color: $color-F5FAF5;
+        }
+        &.is-selected {
+          @include fontSetting(24px, 400, $color-32A13A, 66px);
+        }
+      }
+    }
+    .el-select-dropdown__empty {
+      @include fontSetting(24px, 400, $color_293332, 66px);
+      padding: 25px 0;
+    }
+    .el-popper__arrow {
+      display: none;
+    }
+  }
+}
