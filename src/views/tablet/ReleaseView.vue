@@ -4,7 +4,7 @@ const router = useRouter()
 </script>
 <template>
   <div class="content view tablet bottom_btn">
-    <h2>해당 정보로 <span>입고</span>하시겠습니까?</h2>
+    <h2>해당 정보로 <span>출고</span>하시겠습니까?</h2>
     <div class="tablet_table">
       <table>
         <colgroup>
@@ -21,24 +21,36 @@ const router = useRouter()
             <td class="left">산림농가1</td>
           </tr>
           <tr>
-            <th>생산 일자</th>
+            <th>검사 일자</th>
             <td class="left">2023-05-01</td>
           </tr>
           <tr>
-            <th>입고 일자</th>
+            <th>출고 일자</th>
             <td class="left">2023-05-01 07:00:00</td>
+          </tr>
+          <tr>
+            <th>규격</th>
+            <td class="left">그물망 - 3 kg</td>
+          </tr>
+          <tr>
+            <th>수량</th>
+            <td class="left">50 개</td>
           </tr>
           <tr>
             <th>총 무게</th>
             <td class="left">51.25 kg</td>
           </tr>
           <tr>
-            <th>보관 위치</th>
-            <td class="left">임시 보관</td>
+            <th>재고 무게</th>
+            <td class="left">198.25 kg</td>
           </tr>
           <tr>
-            <th>차량 번호</th>
-            <td class="left">01가 0011</td>
+            <th>등급</th>
+            <td class="left">특상</td>
+          </tr>
+          <tr>
+            <th>배송지</th>
+            <td class="left">B 마트</td>
           </tr>
           <tr>
             <th>비고</th>

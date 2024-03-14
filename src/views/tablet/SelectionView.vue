@@ -2,9 +2,10 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 </script>
+
 <template>
   <div class="content view tablet bottom_btn">
-    <h2>해당 정보로 <span>입고</span>하시겠습니까?</h2>
+    <h2>해당 정보로 <span>선별</span>하시겠습니까?</h2>
     <div class="tablet_table">
       <table>
         <colgroup>
@@ -21,7 +22,7 @@ const router = useRouter()
             <td class="left">산림농가1</td>
           </tr>
           <tr>
-            <th>생산 일자</th>
+            <th>선별 일자</th>
             <td class="left">2023-05-01</td>
           </tr>
           <tr>
@@ -29,16 +30,24 @@ const router = useRouter()
             <td class="left">2023-05-01 07:00:00</td>
           </tr>
           <tr>
-            <th>총 무게</th>
+            <th>선별 무게 (kg)</th>
             <td class="left">51.25 kg</td>
           </tr>
           <tr>
-            <th>보관 위치</th>
-            <td class="left">임시 보관</td>
+            <th>수량</th>
+            <td class="left">10</td>
           </tr>
           <tr>
-            <th>차량 번호</th>
-            <td class="left">01가 0011</td>
+            <th>총 무게</th>
+            <td class="left">특</td>
+          </tr>
+          <tr>
+            <th>재고 무게</th>
+            <td class="left">라인 1</td>
+          </tr>
+          <tr>
+            <th>등급</th>
+            <td class="left">창고 A</td>
           </tr>
           <tr>
             <th>비고</th>

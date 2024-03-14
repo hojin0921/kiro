@@ -13,9 +13,17 @@ import LogView from '@/views/LogView.vue'
 import AlarmView from '@/views/AlarmView.vue'
 import Dashboard from '@/views/DashboardView.vue'
 import NotificationView from '@/views/NotificationView.vue'
+import MainView from '@/views/tablet/MainView.vue'
+import ReceivingWrite from '@/views/tablet/ReceivingWrite.vue'
 import ReceivingView from '@/views/tablet/ReceivingView.vue'
+import ReleaseWrite from '@/views/tablet/ReleaseWrite.vue'
+import ReleaseView from '@/views/tablet/ReleaseView.vue'
+import SelectionWrite from '@/views/tablet/SelectionWrite.vue'
+import SelectionView from '@/views/tablet/SelectionView.vue'
+import RobotWrite from '@/views/tablet/RobotWrite.vue'
 import RouteLayout from '@/layouts/RouteLayout.vue'
 import TabletLayout from '@/layouts/TabletLayout.vue'
+import TabletViewLayout from '@/layouts/TabletViewLayout.vue'
 import TabletLogin from '@/layouts/TabletLogin.vue'
 import LoginPage from '@/layouts/LoginPage.vue'
 
@@ -154,12 +162,50 @@ const router = createRouter({
     },
     {
       path: '/tablet',
+      component: TabletViewLayout,
+      children: [
+        {
+          path: '/tablet/',
+          component: MainView,
+          name: '작업자 관리 시스템'
+        },
+        {
+          path: '/tablet/receiving_view',
+          component: ReceivingView
+        },
+        {
+          path: '/tablet/release_view',
+          component: ReleaseView
+        },
+        {
+          path: '/tablet/selection_view',
+          component: SelectionView
+        }
+      ]
+    },
+    {
+      path: '/tablet',
       component: TabletLayout,
       children: [
         {
           path: '/tablet/receiving',
-          component: ReceivingView,
+          component: ReceivingWrite,
           name: '기본 입고'
+        },
+        {
+          path: '/tablet/release',
+          component: ReleaseWrite,
+          name: '출고'
+        },
+        {
+          path: '/tablet/selection',
+          component: SelectionWrite,
+          name: '선별'
+        },
+        {
+          path: '/tablet/robot',
+          component: RobotWrite,
+          name: '운송 로봇'
         }
       ]
     },

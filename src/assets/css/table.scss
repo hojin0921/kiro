@@ -155,3 +155,53 @@
 .thtable {
   border-top: 1px solid #293332;
 }
+
+.tablet_table {
+  margin-bottom: 12px;
+  table {
+    width: 100%;
+    thead {
+      th {
+        background-color: #f5faf5;
+        @include fontSetting(24px, 700, #293332);
+        height: 72px;
+        border-left: 1px solid #e6e6e6;
+        &:first-of-type {
+          border-left: 0;
+        }
+      }
+    }
+    tbody {
+      tr:first-of-type {
+        td {
+          border-top: 1px solid #293332;
+        }
+        th {
+          border-top: 1px solid #293332;
+        }
+      }
+      th {
+        background-color: #f5faf5;
+        @include fontSetting(24px, 700, #293332);
+        text-align: left;
+        padding-left: 40px;
+        border-bottom: 1px solid #e6e6e6;
+      }
+      td {
+        padding: 22px 0;
+        text-align: center;
+        background-color: $white;
+        @include fontSetting(24px, 500, #293332);
+        border-bottom: 1px solid #e6e6e6;
+        border-left: 1px solid #e6e6e6;
+        &:first-of-type {
+          border-left: 0;
+        }
+        &.left {
+          text-align: left;
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+}

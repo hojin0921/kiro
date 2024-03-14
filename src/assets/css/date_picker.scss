@@ -36,3 +36,11 @@
     }
   }
 }
+
+.el-popper.is-pure {
+  &.tablet_data_picker {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}

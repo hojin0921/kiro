@@ -15,6 +15,12 @@
   --el-input-clear-hover-color: #293332;
   --el-input-focus-border-color: #32a13a;
   --el-input-width: 100%;
+  &.is-disabled {
+    .el-input__wrapper {
+      background-color: #f2f0f0;
+      box-shadow: none;
+    }
+  }
 }
 
 .el-input__inner {

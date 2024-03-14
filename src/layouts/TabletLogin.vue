@@ -25,7 +25,7 @@ const router = useRouter()
           <div class="error_color err">
             사용자로 등록되지 않은 아이디거나, 아이디 또는 비밀번호를 잘못 입력하셨습니다.
           </div>
-          <el-button size="large" type="primary" @click="router.push('/')">로그인</el-button>
+          <el-button size="large" type="primary" @click="router.push('/tablet/')">로그인</el-button>
         </el-form>
       </div>
     </div>

@@ -153,14 +153,22 @@
       padding: 40px 0 32px;
       text-align: center;
       @include fontSetting(36px, 700, $color-293332);
+      span {
+        color: #32a13a;
+      }
     }
     &.bottom_btn {
-      padding-bottom: 120px;
+      padding-bottom: 140px;
     }
     .bottom_button {
       position: fixed;
       bottom: 0;
       width: calc(100% - 62px);
+      margin-bottom: 32px;
+      a {
+        display: block;
+        width: 100%;
+      }
     }
   }
 }

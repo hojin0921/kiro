@@ -80,6 +80,12 @@
         padding-top: 0;
       }
     }
+    .dialog-footer.bottom_button {
+      .el-form-item {
+        padding-top: 0px;
+        margin-bottom: 0;
+      }
+    }
   }
   .el-form--label-top {
     .el-form-item {

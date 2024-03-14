@@ -12,6 +12,10 @@
   --el-button-active-text-color: #293332;
   --el-button-active-border-color: #a0a3a2;
   --el-button-active-bg-color: #e7f4e8;
+  &.bo_green {
+    --el-button-border-color: #32a13a;
+    --el-button-text-color: #32a13a;
+  }
 }
 
 .el-button--success {
@@ -163,6 +167,40 @@
     border-radius: 8px;
     &.ib {
       padding: 0 12px;
+    }
+  }
+  .tablet_btn {
+    .btn {
+      @include flex();
+      border: 1px solid #e6e6e6;
+      background-color: #fff;
+      border-radius: 12px;
+      text-align: center;
+      padding: 32px 0;
+      @include fontSetting(36px, 700, $color_293332, 1.2);
+      i {
+        @include flex();
+        width: 88px;
+        height: 88px;
+        background-color: $color-32A13A;
+        border-radius: 100%;
+        margin-right: 24px;
+      }
+    }
+
+    .flex a {
+      @include flex();
+      border: 1px solid #e6e6e6;
+      background-color: #fff;
+      border-radius: 12px;
+      text-align: center;
+      padding: 33px 0;
+      @include fontSetting(36px, 700, $color_293332, 1.2);
+    }
+    ul {
+      li {
+        margin-top: 24px;
+      }
     }
   }
 }
